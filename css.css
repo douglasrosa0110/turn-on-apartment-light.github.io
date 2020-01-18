@@ -1,0 +1,55 @@
+body {
+    /*background-image: url(image_a.jpg);
+    background-attachment: scroll;
+    background-size: 100% auto;*/
+    /*background-position: center top;*/
+    /*background-repeat: no-repeat; */
+    /*background-color: #ecedea;*/
+}
+
+a {
+	position: relative;
+	font-size: 2vw;
+	background-color: yellow;
+}
+
+area {
+	background-color: yellow;
+}
+
+#block-right {
+	position: fixed;
+	font-size: 5.2vh;
+	background-color: red;
+	line-height: 3.2vw;
+	left: 67.3%;
+	top: 38%;
+}
+
+@media only screen and (max-width: 400px) {
+	#block-right {
+		left:  67%;
+		top: 22%;
+		line-height: 2.5vw;
+	}
+}
+/*img {
+	width: 100%;
+	height: 100%;
+}*/
+#itens {
+	position: absolute; 
+	left: 75%;
+	top: 170px;
+	width: 20%;
+}
+.item {
+	position: relative; 
+	font-size: 3.0vw;
+	width: 100%;
+	color: black;
+	cursor: pointer;
+}
+.vendido {
+	color: yellow;
+}
