@@ -63,11 +63,9 @@
 						
 						/* lights resize */
 						var id = $this.attr('title') 
-						// if(id == '3002'){
-							$("img[id=" + id + "]").css({left: coordsPercent[0].toString() + 'px'})
-							$("img[id=" + id + "]").css({top: coordsPercent[1].toString() + 'px'})
-							$("img[id=" + id + "]").css({width: (4.8*wPercent).toString() + 'px'})
-						// }
+						$("img[id=" + id + "]").css({left: coordsPercent[0].toString() + 'px'})
+						$("img[id=" + id + "]").css({top: coordsPercent[1].toString() + 'px'})
+						$("img[id=" + id + "]").css({width: (4.8*wPercent).toString() + 'px'})
 
 					});
 

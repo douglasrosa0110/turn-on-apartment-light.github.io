@@ -5,12 +5,12 @@ $(document).ready(function() {
 		var $img = $("img[id=" + id + "]")
 		$img.hide()
 		$("area[title=" + id + "]").on('click', function(){
-			if(!$img.hasClass('on')){
+			if(!$img.hasClass('sold')){
 				$img.show();
-				$img.addClass('on')
+				$img.addClass('sold')
 			} else {
 				$img.hide();
-				$img.removeClass('on')
+				$img.removeClass('sold')
 			}
 		})
 	})
