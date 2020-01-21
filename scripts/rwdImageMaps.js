@@ -52,7 +52,7 @@
 
 						for (var i = 0; i < coordsPercent.length; ++i) {
 							if (i % 2 === 0){
-								console.log(wPercent)
+								//console.log(wPercent)
 								coordsPercent[i] = parseInt(((coords[i]/w)*100)*wPercent*2.77);
 							} else {
 								//console.log(hPercent)
@@ -60,7 +60,17 @@
 							}
 						}
 						$this.attr(c, coordsPercent.toString());
+						
+						/* lights resize */
+						var id = $this.attr('title') 
+						// if(id == '3002'){
+							$("img[id=" + id + "]").css({left: coordsPercent[0].toString() + 'px'})
+							$("img[id=" + id + "]").css({top: coordsPercent[1].toString() + 'px'})
+							$("img[id=" + id + "]").css({width: (4.8*wPercent).toString() + 'px'})
+						// }
+
 					});
+
 				}).attr('src', $that.attr('src'));
 			});
 		};

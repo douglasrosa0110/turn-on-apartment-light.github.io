@@ -1,5 +1,22 @@
 $(document).ready(function() {
+	$("img[class=apto]").each(function(){
+		var $this = $(this)
+		var id = $this.attr('id')
+		var $img = $("img[id=" + id + "]")
+		$img.hide()
+		$("area[title=" + id + "]").on('click', function(){
+			if(!$img.hasClass('on')){
+				$img.show();
+				$img.addClass('on')
+			} else {
+				$img.hide();
+				$img.removeClass('on')
+			}
+		})
+	})
+
 	$('img[usemap]').rwdImageMaps();
+    
     $("img").on("click", function(event) {
     	var w = window.innerWidth;
 		var h = window.innerHeight;

@@ -4,17 +4,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js.js"></script>
-		<script type="text/javascript" src="data.js"></script>
-		<script type="text/javascript" src="rwdImageMaps.js"></script>
-		<link rel="stylesheet" href="css.css">
+		<script type="text/javascript" src="scripts/js.js"></script>
+		<script type="text/javascript" src="scripts/rwdImageMaps.js"></script>
+		<link rel="stylesheet" href="styles/css.css">
 	</head>
-	<body>
-  		<img src="image_a.jpg" style="width: 100%" usemap="#map_image"/>
+	<body style="margin: 0">
   		<map name="map_image">
-		  <area shape="rect" coords="820,240,936,274" title="3002" href="#">
-		  <area shape="rect" coords="820,286,936,317" title="2902" href="#">
+	  		<area shape="rect" coords="820,240,936,274" title="3002" href="#">
+	  		<area shape="poli" coords="724,192,724,200" title="3002" href="#">
+			<img id="3002" class="apto" src="images/3002.png" style="position: absolute">
+
+	  		<area shape="rect" coords="820,286,936,317" title="2902" href="#">
+	  		<area shape="poli" coords="724,234,724,200" title="2902" href="#">
+			<img id="2902" class="apto" src="images/2902.png" style="position: absolute">
 		</map>
+  		<img src="images/image_a.jpg" style="width: 100%" usemap="#map_image"/>
 	</body>
 </html>
 
