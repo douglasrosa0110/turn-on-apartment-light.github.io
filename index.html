@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="script/jquery.js"></script>
+		<script type="text/javascript" src="script/angular.js"></script>
+		<script type="text/javascript" src="script/javascript.js"></script>
+		<link rel="stylesheet" href="style/css.css">
+	</head>
+	<body ng-app="myApp" ng-controller="myCtrl" style="margin: 0">
+  		<map name="map_image">
+  			<span ng-repeat="element in elements">
+		  		<area shape="rect" coords="{{element.coords_on_click}}" title={{element.code}} href="#">
+		  		<area shape="poli" coords="{{element.x}},{{element.y}},{{element.x}},{{element.y}}" title={{element.code}} href="#">
+				<img 
+					id={{element.code}}
+					class="{{element.class}}"
+					src="images/lights/{{element.code}}.png">
+			</span>
+		</map>
+  		<img src="images/image_a.jpg" style="width: 100%" usemap="#map_image"/>
+	</body>
+</html>
+
