@@ -18,7 +18,11 @@
   			<span ng-repeat="element in elements">
 		  		<area shape="rect" coords="{{element.coords_on_click}}" title={{element.code}} href="#">
 		  		<area shape="poli" coords="{{element.x}},{{element.y}},{{element.x}},{{element.y}}" title={{element.code}} href="">
-				<img id={{element.code}} class="apto" src="images/lights/{{element.code}}.png">
+				<img 
+					id={{element.code}}
+					class="apto"
+					src="images/lights/{{element.code}}.png" 
+					style="/*transform: rotateX({{$index*3}}deg);*/">
 			</span>
 		</map>
   		<img src="images/image_a.jpg" style="width: 100%" usemap="#map_image"/>
