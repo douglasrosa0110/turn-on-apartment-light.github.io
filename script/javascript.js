@@ -36,6 +36,7 @@ $(document).ready(function() {
 var app = angular.module("myApp", []);
 app.controller("myCtrl", function($scope) {
   $scope.elements = [
+
   	/* first block */
   	{code: "3002", x: "724", y: "192", class: "right", coords_on_click: "820,240,936,274"},
   	{code: "2902", x: "724", y: "234", class: "right", coords_on_click: "820,286,936,317"},
@@ -50,7 +51,6 @@ app.controller("myCtrl", function($scope) {
   	{code: "2002", x: "724", y: "640", class: "right", coords_on_click: "820,678,936,708"},
   	{code: "1902", x: "724", y: "687", class: "right", coords_on_click: "820,722,936,752"},
   	{code: "1802", x: "724", y: "731", class: "right", coords_on_click: "820,766,936,794"},
-
   	{code: "1702", x: "724", y: "778", class: "right ", coords_on_click: "820,808,936,840"},
   	{code: "1602", x: "724", y: "823", class: "right ", coords_on_click: "820,848,936,882"},
   	{code: "1502", x: "724", y: "875", class: "right sold", coords_on_click: "820,892,936,926"},
@@ -60,47 +60,35 @@ app.controller("myCtrl", function($scope) {
   	{code: "1102", x: "724", y: "1054", class: "right ", coords_on_click: "820,1068,936,1101"},
   	{code: "1002", x: "724", y: "1104", class: "right ", coords_on_click: "820,1110,936,1145"},
   	{code: "902", x: "724", y: "1148", class: "right sold", coords_on_click: "820,1158,936,1186"},
-  	/*
-  	{code: "1602", x: "724", y: "282", class: "right ", coords_on_click: "820,326,936,356"},
-  	{code: "1502", x: "724", y: "282", class: "right sold", coords_on_click: "820,326,936,356"},
-  	{code: "1402", x: "724", y: "282", class: "right ", coords_on_click: "820,326,936,356"},
-  	{code: "1302", x: "724", y: "282", class: "right ", coords_on_click: "820,326,936,356"},
-  	{code: "1202", x: "724", y: "282", class: "right ", coords_on_click: "820,326,936,356"},
-  	{code: "1102", x: "724", y: "282", class: "right ", coords_on_click: "820,326,936,356"},
-  	{code: "1002", x: "724", y: "282", class: "right ", coords_on_click: "820,326,936,356"},
-  	{code: "902", x: "724", y: "282", class: "right ", coords_on_click: "820,326,936,356"},
-  	{code: "802", x: "724", y: "282", class: "right ", coords_on_click: "820,326,936,356"},
-  	{code: "702", x: "724", y: "282", class: "right ", coords_on_click: "820,326,936,356"},
-  	*/
+  	{code: "802", x: "724", y: "1193", class: "right ", coords_on_click: "820,1200,936,1232"},
+  	{code: "702", x: "724", y: "1238", class: "right ", coords_on_click: "820,1244,936,1275"},
   	
   	/* secound block */
-  	{code: "3001", x: "420", y: "124", class: "left", coords_on_click: "285,240,405,270"},
-  	/*
-  	{code: "2901", x: "209", y: "234", class: "", coords_on_click: "324,286,936,317"},
-  	{code: "2801", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	
-  	{code: "2701", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "2601", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "2501", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "2401", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "2301", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "2201", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "2101", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "2001", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "1901", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "1801", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "1701", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "1601", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "1501", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "1401", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "1301", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "1201", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "1101", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "1001", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "901", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "801", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	{code: "701", x: "209", y: "282", class: "", coords_on_click: "324,326,936,356"},
-  	*/
+  	{code: "3001", x: "420", y: "124", class: "left sold", coords_on_click: "285,240,405,269"},
+  	{code: "2901", x: "420", y: "173", class: "left sold", coords_on_click: "285,280,405,313"},
+  	{code: "2801", x: "420", y: "220", class: "left sold", coords_on_click: "285,328,405,355"},
+  	{code: "2701", x: "420", y: "265", class: "left sold", coords_on_click: "285,370,405,400"},
+  	{code: "2601", x: "420", y: "312", class: "left sold", coords_on_click: "285,412,405,443"},
+  	{code: "2501", x: "420", y: "357", class: "left sold", coords_on_click: "285,455,405,487"},
+  	{code: "2401", x: "420", y: "405", class: "left sold", coords_on_click: "285,498,405,530"},
+  	{code: "2301", x: "420", y: "453", class: "left sold", coords_on_click: "285,542,405,573"},
+  	{code: "2201", x: "420", y: "501", class: "left sold", coords_on_click: "285,586,405,616"},
+  	{code: "2101", x: "420", y: "545", class: "left sold", coords_on_click: "285,630,405,662"},
+  	{code: "2001", x: "420", y: "590", class: "left sold", coords_on_click: "285,675,405,704"},
+  	{code: "1901", x: "420", y: "635", class: "left sold", coords_on_click: "285,716,405,750"},
+  	{code: "1801", x: "420", y: "670", class: "left sold", coords_on_click: "285,760,405,793"},
+  	{code: "1701", x: "420", y: "717", class: "left sold", coords_on_click: "285,800,405,837"},
+  	{code: "1601", x: "420", y: "762", class: "left sold", coords_on_click: "285,848,405,880"},
+  	{code: "1501", x: "420", y: "814", class: "left sold", coords_on_click: "285,892,405,924"},
+  	{code: "1401", x: "420", y: "859", class: "left sold", coords_on_click: "285,935,405,968"},
+  	{code: "1301", x: "420", y: "904", class: "left sold", coords_on_click: "285,980,405,1011"},
+  	{code: "1201", x: "420", y: "948", class: "left sold", coords_on_click: "285,1024,405,1054"},
+  	{code: "1101", x: "420", y: "993", class: "left sold", coords_on_click: "285,1068,405,1098"},
+  	{code: "1001", x: "420", y: "1043", class: "left sold", coords_on_click: "285,1110,405,1142"},
+  	{code: "901", x: "420", y: "1087", class: "left sold", coords_on_click: "285,1162,405,1183"},
+  	{code: "801", x: "420", y: "1132", class: "left sold", coords_on_click: "285,1196,405,1230"},
+  	{code: "701", x: "420", y: "1222", class: "left sold", coords_on_click: "285,1242,405,1272"},
+  	{code: "601", x: "420", y: "1267", class: "left sold", coords_on_click: "285,1286,405,1313"},
   ];
 });
 
