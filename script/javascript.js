@@ -166,5 +166,3 @@ app.controller("myCtrl", function($scope) {
 		return this;
 	};
 })(jQuery);
-
-

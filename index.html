@@ -6,9 +6,12 @@
 		<script type="text/javascript" src="script/jquery.js"></script>
 		<script type="text/javascript" src="script/angular.js"></script>
 		<script type="text/javascript" src="script/javascript.js"></script>
+		<script type="text/javascript" src="script/react.js"></script>
+		<script type="text/javascript" src="script/react-dom.js"></script>	
 		<link rel="stylesheet" href="style/css.css">
 	</head>
 	<body ng-app="myApp" ng-controller="myCtrl" style="margin: 0">
+  		<div id="sold"></div> <!-- Testing react tecnology to present sold at side of de apartment -->
   		<map name="map_image">
   			<span ng-repeat="element in elements">
 		  		<area shape="rect" coords="{{element.coords_on_click}}" title={{element.code}} href="#">
@@ -19,7 +22,8 @@
 					src="images/lights/{{element.code}}.png">
 			</span>
 		</map>
-  		<img src="images/image_a.jpg" style="width: 100%" usemap="#map_image"/>
+  		<img src="images/image_b.jpg" style="width: 100%" usemap="#map_image"/>
+  		<!-- <script type="text/javascript" src="script/tooltip.js"></script> -->
 	</body>
 </html>
 
