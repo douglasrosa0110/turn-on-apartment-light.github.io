@@ -6,8 +6,14 @@ $(document).ready(function() {
 		if(!$img.hasClass("sold")) $img.hide()
 		$("area[title=" + id + "]").on('click', function(){
 			if(!$img.hasClass('sold')){
+
 				$img.show();
 				$img.addClass('sold')
+
+				/* TODO clip the image_clean and show */
+				debugger
+				//$area = $(this).siblings
+				//$area
 			} else {
 				$img.hide();
 				$img.removeClass('sold')
@@ -28,7 +34,7 @@ $(document).ready(function() {
 	    alert_txt += "Y%: " + (y/w)*100 + "; " 
 	    alert_txt += "window.width: " + (w) + "; " 
 	    alert_txt += "window.height: " + (h) + "; " 
-        alert(alert_txt);
+        //alert(alert_txt);
     });
 });
 
@@ -38,8 +44,8 @@ app.controller("myCtrl", function($scope) {
   $scope.elements = [
 
   	/* first block */
-  	{code: "3002", x: "724", y: "192", class: "right", coords_on_click: "820,240,936,274"},
-  	{code: "2902", x: "724", y: "234", class: "right", coords_on_click: "820,286,936,317"},
+  	{code: "3002", x: "724", y: "192", class: "right", coords_on_click: "820,240,936,274", coords_sold: "940,240,1055,274"},
+  	{code: "2902", x: "724", y: "234", class: "right", coords_on_click: "820,286,936,317", coords_sold: "940,286,1055,317"},
   	{code: "2802", x: "724", y: "282", class: "right", coords_on_click: "820,328,936,357"},
   	{code: "2702", x: "724", y: "326", class: "right", coords_on_click: "820,370,936,400"},
   	{code: "2602", x: "724", y: "370", class: "right", coords_on_click: "820,417,936,445"},

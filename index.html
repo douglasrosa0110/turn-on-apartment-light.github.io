@@ -6,8 +6,8 @@
 		<script type="text/javascript" src="script/jquery.js"></script>
 		<script type="text/javascript" src="script/angular.js"></script>
 		<script type="text/javascript" src="script/javascript.js"></script>
-		<script type="text/javascript" src="script/react.js"></script>
-		<script type="text/javascript" src="script/react-dom.js"></script>	
+		<!-- <script type="text/javascript" src="script/react.js"></script> -->
+		<!-- <script type="text/javascript" src="script/react-dom.js"></script>	 -->
 		<link rel="stylesheet" href="style/css.css">
 	</head>
 	<body ng-app="myApp" ng-controller="myCtrl" style="margin: 0">
@@ -15,14 +15,16 @@
   		<map name="map_image">
   			<span ng-repeat="element in elements">
 		  		<area shape="rect" coords="{{element.coords_on_click}}" title={{element.code}} href="#">
+		  		<!-- <area shape="rect" coords="{{element.coords_sold}}" class="to_show_sold"  href="#"> -->
 		  		<area shape="poli" coords="{{element.x}},{{element.y}},{{element.x}},{{element.y}}" title={{element.code}} href="#">
+  				<!-- <img src="images/image_clean.jpg" style="width: 100%" class="to_show_sold"/> -->
 				<img 
 					id={{element.code}}
 					class="{{element.class}}"
 					src="images/lights/{{element.code}}.png">
 			</span>
 		</map>
-  		<img src="images/image_b.jpg" style="width: 100%" usemap="#map_image"/>
+  		<img src="images/image_values.jpg" style="width: 100%" usemap="#map_image"/>
   		<!-- <script type="text/javascript" src="script/tooltip.js"></script> -->
 	</body>
 </html>
