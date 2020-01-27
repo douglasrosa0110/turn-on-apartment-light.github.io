@@ -132,7 +132,11 @@ app.controller("myCtrl", function($scope) {
 						c = 'coords';
 
 					$('map[name="' + map + '"]').find('area').each(function() {
+
 						var $this = $(this);
+						
+
+
 						if (!$this.data(c))
 							$this.data(c, $this.attr(c));
 
@@ -150,16 +154,21 @@ app.controller("myCtrl", function($scope) {
 						}
 						$this.attr(c, coordsPercent.toString());
 						
-						/* lights resize */
-						var id = $this.attr('title') 
-						//$img = $("img[id=" + id + "]")
-						$("img[id=" + id + "]").css({left: coordsPercent[0].toString() + 'px'})
-						$("img[id=" + id + "]").css({top: coordsPercent[1].toString() + 'px'})
+						if(!$this.hasClass('to_show_sold')){
+							/* lights resize */
+							var id = $this.attr('title') 
+							//$img = $("img[id=" + id + "]")
+							$("img[id=" + id + "]").css({left: coordsPercent[0].toString() + 'px'})
+							$("img[id=" + id + "]").css({top: coordsPercent[1].toString() + 'px'})
 
-						if($("img[id=" + id + "]").hasClass("right")){
-							$("img[id=" + id + "]").css({width: (4.8*wPercent).toString() + 'px'})
+							if($("img[id=" + id + "]").hasClass("right")){
+								$("img[id=" + id + "]").css({width: (4.8*wPercent).toString() + 'px'})
+							} else {
+								// TODO
+							}
+
 						} else {
-							$("img[id=" + id + "]").css({width: (23.5*wPercent).toString() + 'px'})
+							debugger
 						}
 
 					});
