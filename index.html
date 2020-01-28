@@ -6,18 +6,24 @@
 		<script type="text/javascript" src="script/jquery.js"></script>
 		<script type="text/javascript" src="script/angular.js"></script>
 		<script type="text/javascript" src="script/javascript.js"></script>
-		<!-- <script type="text/javascript" src="script/react.js"></script> -->
-		<!-- <script type="text/javascript" src="script/react-dom.js"></script>	 -->
 		<link rel="stylesheet" href="style/css.css">
 	</head>
 	<body ng-app="myApp" ng-controller="myCtrl" style="margin: 0">
-  		<div id="sold"></div> <!-- Testing react tecnology to present sold at side of de apartment -->
   		<map name="map_image">
   			<span ng-repeat="element in elements">
 		  		<area shape="rect" coords="{{element.coords_on_click}}" title={{element.code}} href="#">
 		  		<area shape="rect" coords="{{element.coords_sold}}" class="to_show_sold"  href="#">
 		  		<area shape="poli" coords="{{element.x}},{{element.y}},{{element.x}},{{element.y}}" title={{element.code}} href="#">
-  				<!-- <img src="images/image_clean.jpg" style="width: 100%" class="to_show_sold"/> -->
+				<img 
+					class="{{element.class}}" 
+					[hidden]="{{!(element.code == 3002)}}" 
+					id="{{element.code}}-to_show_sold" 
+					src="images/image_sold.jpg" 
+					style='
+						width: 100%;
+						/*clip-path: inset("{{element.coords_sold}}")*/
+						'
+					/>
 				<img 
 					id={{element.code}}
 					class="{{element.class}}"
@@ -25,7 +31,6 @@
 			</span>
 		</map>
   		<img src="images/image_values.jpg" style="width: 100%" usemap="#map_image"/>
-  		<!-- <script type="text/javascript" src="script/tooltip.js"></script> -->
 	</body>
 </html>
 
