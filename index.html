@@ -12,17 +12,14 @@
   		<map name="map_image">
   			<span ng-repeat="element in elements">
 		  		<area shape="rect" coords="{{element.coords_on_click}}" title={{element.code}} href="#">
-		  		<area shape="rect" coords="{{element.coords_sold}}" class="to_show_sold"  href="#">
+		  		<!-- <area shape="rect" coords="{{element.coords_sold}}" class="to_show_sold"  href="#"> -->
 		  		<area shape="poli" coords="{{element.x}},{{element.y}},{{element.x}},{{element.y}}" title={{element.code}} href="#">
 				<img 
-					class="{{element.class}}" 
+					class="to_show_sold" 
 					[hidden]="{{!(element.code == 3002)}}" 
 					id="{{element.code}}-to_show_sold" 
 					src="images/image_sold.jpg" 
-					style='
-						width: 100%;
-						/*clip-path: inset("{{element.coords_sold}}")*/
-						'
+					style="width: 100%; clip-path: inset({{element.coords_clip}});"
 					/>
 				<img 
 					id={{element.code}}
