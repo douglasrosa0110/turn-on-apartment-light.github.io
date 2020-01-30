@@ -42,12 +42,12 @@ app.controller("myCtrl", function($scope) {
   $scope.elements = [
 
   	/* first block */
-  	{code: "3002", x: "724", y: "192", class: "right sold", coords_on_click: "820,240,936,274", coords_clip: "10% 17% 84.8% 74.3%"},
-  	{code: "2902", x: "724", y: "234", class: "right  sold", coords_on_click: "820,286,936,317",  coords_clip: "16% 17% 82.2% 74.3%"},
-  	{code: "2802", x: "724", y: "282", class: "right  sold", coords_on_click: "820,328,936,357",  coords_clip: "18% 17% 79.6% 74.3%"},
-  	{code: "2702", x: "724", y: "326", class: "right sold", coords_on_click: "820,370,936,400",  coords_clip: "20% 17% 77.5% 74.3%"},
-  	{code: "2602", x: "724", y: "370", class: "right sold", coords_on_click: "820,417,936,445",  coords_clip: "22% 17% 75% 74.3%"},
-  	{code: "2502", x: "724", y: "415", class: "right sold", coords_on_click: "820,461,936,489",  coords_clip: "24% 17% 72.5% 74.3%"},
+  	{code: "3002", x: "724", y: "192", class: "right ", coords_on_click: "820,240,936,274", coords_clip: "10% 17% 84.8% 74.3%"},
+  	{code: "2902", x: "724", y: "234", class: "right  ", coords_on_click: "820,286,936,317",  coords_clip: "16% 17% 82.2% 74.3%"},
+  	{code: "2802", x: "724", y: "282", class: "right  ", coords_on_click: "820,328,936,357",  coords_clip: "18% 17% 79.6% 74.3%"},
+  	{code: "2702", x: "724", y: "326", class: "right ", coords_on_click: "820,370,936,400",  coords_clip: "20% 17% 77.5% 74.3%"},
+  	{code: "2602", x: "724", y: "370", class: "right ", coords_on_click: "820,417,936,445",  coords_clip: "22.5% 17% 75% 74.3%"},
+  	{code: "2502", x: "724", y: "415", class: "right sold", coords_on_click: "820,461,936,489",  coords_clip: "25% 17% 72.5% 74.3%"},
   	/*
   	{code: "2402", x: "724", y: "460", class: "right sold", coords_on_click: "820,506,936,534",  coords_clip: "xxx% 17% yyy% 74.3%"},
   	{code: "2302", x: "724", y: "506", class: "right sold", coords_on_click: "820,548,936,579",  coords_clip: "xxx% 17% yyy% 74.3%"},
